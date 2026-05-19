@@ -1080,7 +1080,7 @@
           <!-- PROJET 1 : GuardianPy -->
           <div class="glass-card project-card" id="proj-1">
             <div class="project-compact">
-              <div class="project-num">01 / 03</div>
+              <div class="project-num">01 / 05</div>
               <div class="project-title">GuardianPy</div>
               <div class="project-desc">Bot d'audit DevSecOps — scan de ports, scoring de risque, dashboard temps réel.</div>
               <div class="project-mock">
@@ -1122,7 +1122,7 @@
             <div class="project-detail">
               <button class="project-close" onclick="closeProject('proj-1')">✕</button>
               <div class="project-detail-content">
-                <div class="project-num">01 / 03</div>
+                <div class="project-num">01 / 05</div>
                 <h3>GuardianPy</h3>
                 <p>Bot d'audit DevSecOps complet en Python. Scan TCP de ports avec scoring de risque (LOW/MEDIUM/HIGH/CRITICAL), génération de rapports JSON, stockage MongoDB, API REST Flask, et dashboard Next.js pour visualiser les scans en temps réel.</p>
                 <p>Architecture Docker Compose avec 3 services (api / dashboard / mongo). CI/CD GitHub Actions avec Bandit (SAST), Trivy (image scan) et Gitleaks (secrets leak detection).</p>
@@ -1162,7 +1162,7 @@
           <!-- PROJET 2 : Klub -->
           <div class="glass-card project-card" id="proj-2">
             <div class="project-compact">
-              <div class="project-num">02 / 03</div>
+              <div class="project-num">02 / 05</div>
               <div class="project-title">Klub</div>
               <div class="project-desc">Marketplace B2B2C — BDE × prestataires événementiels. Auth, paiement, temps réel.</div>
               <div class="project-mock">
@@ -1209,7 +1209,7 @@
             <div class="project-detail">
               <button class="project-close" onclick="closeProject('proj-2')">✕</button>
               <div class="project-detail-content">
-                <div class="project-num">02 / 03</div>
+                <div class="project-num">02 / 05</div>
                 <h3>Klub</h3>
                 <p>Marketplace B2B2C mettant en relation les Bureaux Des Étudiants avec des prestataires événementiels (DJ, traiteurs, photographes, sécurité). Gestion complète d'événements avec budgets, messagerie temps réel et paiements intégrés.</p>
                 <p>CLAUDE.md + CLAUDE_SECURITY.md pour la gouvernance IA. CI/CD complet avec scans SAST, image et secrets. Gestion des rôles BDE / Prestataire / Admin avec Row Level Security Supabase.</p>
@@ -1257,7 +1257,7 @@
           <!-- PROJET 3 : AlternanceHub -->
           <div class="glass-card project-card" id="proj-3">
             <div class="project-compact">
-              <div class="project-num">03 / 03</div>
+              <div class="project-num">03 / 05</div>
               <div class="project-title">AlternanceHub</div>
               <div class="project-desc">SaaS agrégateur d'offres d'alternance cybersécurité — scraping auto, zéro coût infra.</div>
               <div class="project-mock">
@@ -1305,7 +1305,7 @@
             <div class="project-detail">
               <button class="project-close" onclick="closeProject('proj-3')">✕</button>
               <div class="project-detail-content">
-                <div class="project-num">03 / 03</div>
+                <div class="project-num">03 / 05</div>
                 <h3>AlternanceHub</h3>
                 <p>SaaS agrégateur d'offres d'alternance en cybersécurité avec contrainte zéro-coût infra. Scraping automatique via GitHub Actions CronJob (Python), stockage Supabase free tier avec RLS, frontend Next.js déployé sur Vercel.</p>
                 <p>DevSecOps intégré : Bandit (SAST), Trivy (scan d'images), Gitleaks (secrets), SBOM via Syft, manifestes Kubernetes k3s pour l'orchestration locale.</p>
@@ -1338,6 +1338,162 @@
                   <span class="skill-pill pill-indigo">Trivy</span>
                 </div>
                 <a href="https://github.com/PayzzTTV" class="btn-primary" target="_blank" rel="noopener">
+                  <i class="ti ti-brand-github"></i> Voir sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJET 4 : WebScanner -->
+          <div class="glass-card project-card" id="proj-4">
+            <div class="project-compact">
+              <div class="project-num">04 / 05</div>
+              <div class="project-title">WebScanner</div>
+              <div class="project-desc">Outil d'audit de sécurité web — 97 modules, crawler récursif, fuzzer multithreadé.</div>
+              <div class="project-mock">
+                <div style="background:#0f0f23; border-radius:12px; padding:16px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#a5f3fc; height:190px; overflow:hidden; line-height:1.7;">
+                  <div style="color:#6ee7b7">$ webscanner https://cible.com --crawl --max-depth 2</div>
+                  <div style="color:#94a3b8; margin-top:4px">[*] Crawler — 42 URLs mapped</div>
+                  <div style="color:#f87171; margin-top:2px">[!] XSS found — /search?q= <span style="background:rgba(248,113,113,0.2);padding:1px 5px;border-radius:3px;">HIGH</span></div>
+                  <div style="color:#f87171">[!] SQLi (time-based) — /api/users <span style="background:rgba(248,113,113,0.2);padding:1px 5px;border-radius:3px;">CRITICAL</span></div>
+                  <div style="color:#fbbf24">[!] CORS misconfigured — /api/* <span style="background:rgba(251,191,36,0.2);padding:1px 5px;border-radius:3px;">HIGH</span></div>
+                  <div style="color:#fbbf24">[!] .env exposed — /.env <span style="background:rgba(251,191,36,0.2);padding:1px 5px;border-radius:3px;">CRITICAL</span></div>
+                  <div style="color:#6ee7b7">[✓] HSTS present · HTTPS enforced</div>
+                  <div style="margin-top:8px; color:#94a3b8; font-size:9px">Modules actifs</div>
+                  <div style="height:4px; background:#1e293b; border-radius:3px; margin-top:3px">
+                    <div style="height:4px; width:97%; background:linear-gradient(90deg,#a78bfa,#38bdf8); border-radius:3px;"></div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;margin-top:3px;font-size:9px;color:#64748b"><span>0</span><span style="color:#a78bfa">97 / 97</span><span>100</span></div>
+                  <div style="margin-top:6px;color:#64748b;font-size:9px">253 tests · coverage 99% · CI passing</div>
+                </div>
+              </div>
+              <div class="project-stack">
+                <span class="skill-pill pill-indigo">Python 3.11</span>
+                <span class="skill-pill pill-indigo">pytest</span>
+                <span class="skill-pill pill-violet">Jinja2</span>
+                <span class="skill-pill pill-dark">GitHub Actions</span>
+                <span class="skill-pill pill-indigo">OWASP</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/PayzzTTV/scanner_vulnerability_web" class="project-link" target="_blank" rel="noopener">
+                  <i class="ti ti-brand-github"></i> GitHub <i class="ti ti-arrow-right"></i>
+                </a>
+                <span class="project-expand-hint">↗ cliquer pour détails</span>
+              </div>
+            </div>
+
+            <div class="project-detail">
+              <button class="project-close" onclick="closeProject('proj-4')">✕</button>
+              <div class="project-detail-content">
+                <div class="project-num">04 / 05</div>
+                <h3>WebScanner</h3>
+                <p>Outil d'audit de sécurité web automatisé entièrement en Python, couvrant 97 modules de détection : exploits CVEs critiques (Log4Shell, Spring4Shell, Shellshock), injections avancées (SQLi, NoSQL, XSS, XXE, SSTI, SSRF, Command Injection), fuites de données (clés API, JWT none, Firebase), exposition cloud (AWS IMDS, S3 takeover, subdomain takeover) et mauvaises configurations (CORS, CSP, HSTS, cookies).</p>
+                <p>Intègre un crawler récursif qui mappe l'intégralité de la surface d'attaque, un fuzzer multithreadé pour découvrir les assets cachés, un système anti-faux positifs (Soft 404 + validation sémantique), et un Stealth Mode avec rotation de User-Agents et détection WAF (Cloudflare, Akamai, AWS WAF). Export des rapports JSON, HTML et PDF pour intégration SIEM.</p>
+                <div class="detail-mock">
+                  <div style="background:#0f0f23; border-radius:12px; padding:20px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#a5f3fc; line-height:1.9;">
+                    <div style="color:#6ee7b7">$ webscanner https://cible.com --crawl --max-depth 2 --html report.html --pdf report.pdf</div>
+                    <div style="color:#94a3b8; margin-top:6px">[*] Stealth Mode — UA rotation active · WAF: Cloudflare detected</div>
+                    <div style="color:#94a3b8">[*] Crawler — 42 URLs · Fuzzer — 8 400 paths tested</div>
+                    <div style="color:#f87171; margin-top:4px">[CRITICAL] Log4Shell (CVE-2021-44228) — /api/login header X-Api-Version</div>
+                    <div style="color:#f87171">[CRITICAL] SQLi time-based — /api/users?id=1 (WAITFOR 5s confirmed)</div>
+                    <div style="color:#f87171">[CRITICAL] .env exposed — /.env · STRIPE_KEY=sk_live_***</div>
+                    <div style="color:#fbbf24">[HIGH] XSS stored — /comments?body=&lt;script&gt;</div>
+                    <div style="color:#fbbf24">[HIGH] CORS * — /api/* Accept-Credentials: true</div>
+                    <div style="color:#6ee7b7; margin-top:4px">[✓] Report: report.html · report.pdf</div>
+                    <div style="color:#a78bfa">97 modules · 253 tests · coverage 99%</div>
+                  </div>
+                </div>
+                <div style="margin-bottom:24px">
+                  <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
+                  <span class="skill-pill pill-indigo">Python 3.11+</span>
+                  <span class="skill-pill pill-indigo">pytest</span>
+                  <span class="skill-pill pill-violet">Jinja2</span>
+                  <span class="skill-pill pill-dark">GitHub Actions CI</span>
+                  <span class="skill-pill pill-indigo">OWASP Top 10</span>
+                  <span class="skill-pill pill-indigo">CVE exploitation</span>
+                  <span class="skill-pill pill-violet">Fuzzing</span>
+                  <span class="skill-pill pill-dark">WAF detection</span>
+                  <span class="skill-pill pill-dark">JSON/HTML/PDF</span>
+                </div>
+                <a href="https://github.com/PayzzTTV/scanner_vulnerability_web" class="btn-primary" target="_blank" rel="noopener" style="margin-right:12px">
+                  <i class="ti ti-brand-github"></i> Voir sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJET 5 : RootGuard -->
+          <div class="glass-card project-card" id="proj-5">
+            <div class="project-compact">
+              <div class="project-num">05 / 05</div>
+              <div class="project-title">RootGuard</div>
+              <div class="project-desc">Scanner d'intégrité système & détection de rootkits — baseline SHA-256, CI/CD complet.</div>
+              <div class="project-mock">
+                <div style="background:#0f0f23; border-radius:12px; padding:16px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#a5f3fc; height:190px; overflow:hidden; line-height:1.7;">
+                  <div style="color:#6ee7b7">$ sudo python3 main.py scan</div>
+                  <div style="color:#94a3b8; margin-top:4px">=== RootGuard Scan Report ===</div>
+                  <div style="color:#94a3b8">  Files scanned : 1247 · Duration : 3.41s</div>
+                  <div style="color:#f87171; margin-top:4px">[CRITICAL] MODIFIED (1)</div>
+                  <div style="color:#e2e8f0; font-size:9px; margin-left:8px">* /etc/passwd</div>
+                  <div style="color:#64748b; font-size:9px; margin-left:10px">old: d9d9306e… → new: 0dc05bb0…</div>
+                  <div style="color:#fbbf24; margin-top:4px">[HIGH] NEW (1)</div>
+                  <div style="color:#e2e8f0; font-size:9px; margin-left:8px">* /usr/bin/evil_binary</div>
+                  <div style="color:#64748b; font-size:9px; margin-left:10px">hash: 4b2e7f9a…</div>
+                  <div style="margin-top:6px; color:#94a3b8; font-size:9px; border-top:1px solid #1e293b; padding-top:5px">Anomalies: 2 · Bandit: 0 issues · Trivy: 0 HIGH</div>
+                </div>
+              </div>
+              <div class="project-stack">
+                <span class="skill-pill pill-indigo">Python 3.11</span>
+                <span class="skill-pill pill-indigo">pytest</span>
+                <span class="skill-pill pill-dark">Docker</span>
+                <span class="skill-pill pill-dark">GitHub Actions</span>
+                <span class="skill-pill pill-indigo">Bandit</span>
+                <span class="skill-pill pill-indigo">Trivy</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/PayzzTTV/toolscyber-" class="project-link" target="_blank" rel="noopener">
+                  <i class="ti ti-brand-github"></i> GitHub <i class="ti ti-arrow-right"></i>
+                </a>
+                <span class="project-expand-hint">↗ cliquer pour détails</span>
+              </div>
+            </div>
+
+            <div class="project-detail">
+              <button class="project-close" onclick="closeProject('proj-5')">✕</button>
+              <div class="project-detail-content">
+                <div class="project-num">05 / 05</div>
+                <h3>RootGuard</h3>
+                <p>Outil CLI Python de surveillance de l'intégrité des fichiers critiques d'un système Linux. Génère une baseline cryptographique SHA-256 des chemins système (<code>/bin</code>, <code>/sbin</code>, <code>/etc</code>, <code>/usr/bin</code>, <code>/boot</code>, <code>/lib</code>), stockée en lecture seule (chmod 400), puis compare à chaque scan pour détecter toute modification (CRITICAL), ajout (HIGH) ou suppression (MEDIUM) — typiques d'une infection rootkit ou d'une compromission post-exploitation.</p>
+                <p>Pipeline CI/CD complet : lint → test → SAST Bandit → docker-build → Trivy scan (CI), puis build-and-push GHCR → release (CD). Image Docker non-root multi-stage, export JSON compatible SIEM (Splunk, Elasticsearch). Conçu pour s'intégrer en CronJob Kubernetes ou pipeline DevSecOps Shift Left.</p>
+                <div class="detail-mock">
+                  <div style="background:#0f0f23; border-radius:12px; padding:20px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#a5f3fc; line-height:1.9;">
+                    <div style="color:#6ee7b7">$ sudo python3 main.py scan --output json</div>
+                    <div style="color:#94a3b8; margin-top:6px">=== RootGuard Scan Report ===</div>
+                    <div style="color:#94a3b8">  Files scanned : 1247 · Anomalies : 2 · Duration : 3.41s</div>
+                    <div style="color:#f87171; margin-top:6px">[CRITICAL] MODIFIED (1)</div>
+                    <div style="color:#e2e8f0; margin-left:12px">* /etc/passwd</div>
+                    <div style="color:#64748b; font-size:10px; margin-left:14px">old: d9d9306eaf0ace2ce… → new: 0dc05bb02996ee65c…</div>
+                    <div style="color:#fbbf24; margin-top:4px">[HIGH] NEW (1)</div>
+                    <div style="color:#e2e8f0; margin-left:12px">* /usr/bin/evil_binary</div>
+                    <div style="color:#64748b; font-size:10px; margin-left:14px">hash: 4b2e7f9a1c3d5e6f…</div>
+                    <div style="color:#6ee7b7; margin-top:6px">✓ Bandit: 0 issues · Trivy: 0 HIGH/CRITICAL</div>
+                    <div style="color:#a78bfa">→ report.json — SIEM ready</div>
+                  </div>
+                </div>
+                <div style="margin-bottom:24px">
+                  <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
+                  <span class="skill-pill pill-indigo">Python 3.11+</span>
+                  <span class="skill-pill pill-indigo">pytest</span>
+                  <span class="skill-pill pill-dark">Docker multi-stage</span>
+                  <span class="skill-pill pill-dark">GHCR</span>
+                  <span class="skill-pill pill-dark">GitHub Actions CI/CD</span>
+                  <span class="skill-pill pill-indigo">Bandit (SAST)</span>
+                  <span class="skill-pill pill-indigo">Trivy</span>
+                  <span class="skill-pill pill-violet">SHA-256</span>
+                  <span class="skill-pill pill-violet">JSON / SIEM</span>
+                  <span class="skill-pill pill-dark">Kubernetes CronJob</span>
+                </div>
+                <a href="https://github.com/PayzzTTV/toolscyber-" class="btn-primary" target="_blank" rel="noopener" style="margin-right:12px">
                   <i class="ti ti-brand-github"></i> Voir sur GitHub
                 </a>
               </div>
