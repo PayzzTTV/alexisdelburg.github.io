@@ -673,11 +673,14 @@
     /* ===== PROJECT MODAL ===== */
     #project-modal {
       position: fixed; inset: 0; z-index: 1001;
-      display: none; overflow-y: auto;
+      display: none; overflow-y: scroll;
       background: var(--glass-bg);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
+    #project-modal::-webkit-scrollbar { display: none; }
     #project-modal.open { display: block; }
     .modal-inner {
       min-height: 100vh; padding: 60px 80px;
@@ -2152,9 +2155,14 @@
   }
   window.addEventListener('load', () => {
     const m = document.getElementById('pstb-modal');
-    if (!m) return;
-    m.addEventListener('wheel', (e) => { e.stopPropagation(); }, { passive: true });
-    m.addEventListener('touchmove', (e) => { e.stopPropagation(); }, { passive: true });
+    if (m) {
+      m.addEventListener('wheel', (e) => { e.stopPropagation(); }, { passive: true });
+      m.addEventListener('touchmove', (e) => { e.stopPropagation(); }, { passive: true });
+    }
+    if (modal) {
+      modal.addEventListener('wheel', (e) => { e.stopPropagation(); }, { passive: true });
+      modal.addEventListener('touchmove', (e) => { e.stopPropagation(); }, { passive: true });
+    }
   });
 
   // ===== NAVBAR SCROLL EFFECT =====
