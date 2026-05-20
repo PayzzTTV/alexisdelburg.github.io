@@ -1087,7 +1087,7 @@
           <!-- PROJET 1 : GuardianPy -->
           <div class="glass-card project-card" id="proj-1">
             <div class="project-compact">
-              <div class="project-num">01 / 05</div>
+              <div class="project-num">02 / 06</div>
               <div class="project-title">GuardianPy</div>
               <div class="project-desc">Bot d'audit DevSecOps — scan de ports, scoring de risque, dashboard temps réel.</div>
               <div class="project-mock">
@@ -1129,7 +1129,7 @@
             <div class="project-detail">
               <button class="project-close" onclick="closeProject('proj-1')">✕</button>
               <div class="project-detail-content">
-                <div class="project-num">01 / 05</div>
+                <div class="project-num">02 / 06</div>
                 <h3>GuardianPy</h3>
                 <p>Bot d'audit DevSecOps complet en Python. Scan TCP de ports avec scoring de risque (LOW/MEDIUM/HIGH/CRITICAL), génération de rapports JSON, stockage MongoDB, API REST Flask, et dashboard Next.js pour visualiser les scans en temps réel.</p>
                 <p>Architecture Docker Compose avec 3 services (api / dashboard / mongo). CI/CD GitHub Actions avec Bandit (SAST), Trivy (image scan) et Gitleaks (secrets leak detection).</p>
@@ -1468,7 +1468,7 @@
             <div class="project-detail">
               <button class="project-close" onclick="closeProject('proj-5')">✕</button>
               <div class="project-detail-content">
-                <div class="project-num">05 / 05</div>
+                <div class="project-num">06 / 06</div>
                 <h3>RootGuard</h3>
                 <p>Outil CLI Python de surveillance de l'intégrité des fichiers critiques d'un système Linux. Génère une baseline cryptographique SHA-256 des chemins système (<code>/bin</code>, <code>/sbin</code>, <code>/etc</code>, <code>/usr/bin</code>, <code>/boot</code>, <code>/lib</code>), stockée en lecture seule (chmod 400), puis compare à chaque scan pour détecter toute modification (CRITICAL), ajout (HIGH) ou suppression (MEDIUM) — typiques d'une infection rootkit ou d'une compromission post-exploitation.</p>
                 <p>Pipeline CI/CD complet : lint → test → SAST Bandit → docker-build → Trivy scan (CI), puis build-and-push GHCR → release (CD). Image Docker non-root multi-stage, export JSON compatible SIEM (Splunk, Elasticsearch). Conçu pour s'intégrer en CronJob Kubernetes ou pipeline DevSecOps Shift Left.</p>
@@ -1530,7 +1530,7 @@
   </div>
   <div class="projects-nav" style="position:fixed; bottom:32px;">
     <button class="projects-nav-btn" id="modal-prev" onclick="modalNav(-1)">&#8592;</button>
-    <span class="projects-nav-counter" id="modal-counter">1 / 3</span>
+    <span class="projects-nav-counter" id="modal-counter">1 / 6</span>
     <button class="projects-nav-btn" id="modal-next" onclick="modalNav(1)">&#8594;</button>
   </div>
 </div>
@@ -1899,7 +1899,7 @@
   const phrases = [
     'Alternant Cybersécurité & DevSecOps',
     'CTF player · Alias: Sti2Zzy',
-    'Builder → GuardianPy · Klub · AlternanceHub',
+    'Builder → HoneyTrap · GuardianPy · Klub',
     'Sécurité by design, open source by default'
   ];
   let pi = 0, ci = 0, deleting = false;
@@ -2137,6 +2137,10 @@
     });
   }
 
+  function closeProject() {
+    closeModal();
+  }
+
   // ESC key to close
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -2222,6 +2226,177 @@
       </div>
 
       <div class="pstb-ue">
+        <div class="pstb-ue-title">UE01 — Business for Tech</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Économie et Finance</span>
+          <span class="pstb-subject">Information Comptable</span>
+          <span class="pstb-subject">Marketing</span>
+          <span class="pstb-subject">Digital Humanités</span>
+          <span class="pstb-subject">GéopolitEch I</span>
+          <span class="pstb-subject">Lifeskills I</span>
+          <span class="pstb-subject">Business English</span>
+          <span class="pstb-subject">Parcours Inclusion, Diversité & Handicap</span>
+          <span class="pstb-subject">Parcours Transition Écologique I</span>
+          <span class="pstb-subject">Rapport d'Activité Professionnelle</span>
+          <span class="pstb-subject">Statistiques et Data Analytics I</span>
+          <span class="pstb-subject">Associations</span>
+        </div>
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE02 — Tech for Business</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Statistiques et Data Analytics I</span>
+          <span class="pstb-subject">Algorithmique</span>
+          <span class="pstb-subject">Base de données — MySQL</span>
+          <span class="pstb-subject">Introduction aux Réseaux</span>
+          <span class="pstb-subject">PHP et Dev Web</span>
+          <span class="pstb-subject">Programmation No Code I</span>
+          <span class="pstb-subject">Programmation Python</span>
+          <span class="pstb-subject">Certification TOSA Excel</span>
+          <span class="pstb-subject">IT Skills</span>
+        </div>
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE03 — Parcours Expérientiel</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Journée d'Intégration</span>
+          <span class="pstb-subject">Master Class I</span>
+          <span class="pstb-subject">International Learning I</span>
+          <span class="pstb-subject">Les Rendez-vous de la Tech I</span>
+          <span class="pstb-subject">Lifeskills I</span>
+          <span class="pstb-subject">Rapport d'Activité Professionnelle</span>
+          <span class="pstb-subject">Associations I</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACHELOR 2 -->
+    <div class="pstb-year-block">
+      <div class="pstb-year-title">
+        <span class="pstb-year-badge">B2</span>
+        Bachelor 2 — Cybersécurité
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE01 — Business for Tech</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Droit des Affaires</span>
+          <span class="pstb-subject">Associations</span>
+          <span class="pstb-subject">Entrepreneuriat et Innovation</span>
+          <span class="pstb-subject">Information Financière II</span>
+          <span class="pstb-subject">Marketing Opérationnel</span>
+          <span class="pstb-subject">Lifeskills II</span>
+          <span class="pstb-subject">Statistiques et Data Analytics II</span>
+          <span class="pstb-subject">Digital Humanités II</span>
+          <span class="pstb-subject">GéopolitEch II</span>
+          <span class="pstb-subject">Parcours Inclusion, Diversité & Handicap</span>
+          <span class="pstb-subject">Tech and Business English</span>
+          <span class="pstb-subject">Parcours Transition Écologique</span>
+          <span class="pstb-subject">Rapport d'Activité Professionnelle</span>
+        </div>
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE02 — Tech for Business</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Stratégie Social Media</span>
+          <span class="pstb-subject">Administration Système</span>
+          <span class="pstb-subject">Certification TOSA Python</span>
+          <span class="pstb-subject">Cybersécurité & Ethical Hacking</span>
+          <span class="pstb-subject">Data Engineering</span>
+          <span class="pstb-subject">DevOps</span>
+          <span class="pstb-subject">Gestion de Projet Web</span>
+          <span class="pstb-subject">IA & Machine Learning</span>
+          <span class="pstb-subject">Programmation Objets — Java</span>
+          <span class="pstb-subject">UI / UX Design</span>
+        </div>
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE03 — Parcours Expérientiel</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Journée d'Intégration II</span>
+          <span class="pstb-subject">Master Class II</span>
+          <span class="pstb-subject">International Learning</span>
+          <span class="pstb-subject">Tech and Business English II</span>
+          <span class="pstb-subject">Les Rendez-vous de la Tech II</span>
+          <span class="pstb-subject">Rapport d'Activité Professionnelle</span>
+          <span class="pstb-subject">Certification TOSA Python</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACHELOR 3 -->
+    <div class="pstb-year-block">
+      <div class="pstb-year-title">
+        <span class="pstb-year-badge">B3</span>
+        Bachelor 3 — Cybersécurité
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE01 — Politique de Pilotage de Sécurité</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Architecture Technique</span>
+          <span class="pstb-subject">Développer à l'ère de l'IA</span>
+          <span class="pstb-subject">Data Marketing</span>
+          <span class="pstb-subject">Infrastructure Niveau 3</span>
+          <span class="pstb-subject">QA — Assurance Qualité</span>
+        </div>
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE02 — Cycle de Vie d'une Solution Digitale</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Gestion de la Situation Critique</span>
+          <span class="pstb-subject">Projet Préproduction Solution Digitale</span>
+          <span class="pstb-subject">Projet Production Solution Digitale</span>
+          <span class="pstb-subject">Préparation Certification Scrum Master</span>
+        </div>
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE03 — Développement & Structuration</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Développement Front — React.js / Python</span>
+          <span class="pstb-subject">Librairies DataVisualisation</span>
+        </div>
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE04 — Parcours Expérientiel</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Journée d'Intégration</span>
+          <span class="pstb-subject">International Learning Expedition</span>
+          <span class="pstb-subject">Parcours Inclusion, Diversité & Handicap</span>
+          <span class="pstb-subject">RSE — Rendez-vous de la Tech</span>
+          <span class="pstb-subject">Parcours Transition Écologique</span>
+          <span class="pstb-subject">Certification Task</span>
+        </div>
+      </div>
+
+      <div class="pstb-ue">
+        <div class="pstb-ue-title">UE05 — Expertise Cybersécurité</div>
+        <div class="pstb-subjects">
+          <span class="pstb-subject">Cybersécurité & Ethical Hacking II</span>
+          <span class="pstb-subject">Sécurité des Systèmes d'Exploitation</span>
+          <span class="pstb-subject">Cryptographie</span>
+          <span class="pstb-subject">Sécurité Cloud et Virtualisation</span>
+          <span class="pstb-subject">Professionnal Capstone</span>
+          <span class="pstb-subject">Management des Équipes</span>
+          <span class="pstb-subject">Management de Projet</span>
+          <span class="pstb-subject">Marketing et Communication Digitale</span>
+          <span class="pstb-subject">Reporting et Suivi Budgétaire</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+">
         <div class="pstb-ue-title">UE01 — Business for Tech</div>
         <div class="pstb-subjects">
           <span class="pstb-subject">Économie et Finance</span>
