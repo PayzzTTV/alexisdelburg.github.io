@@ -2067,25 +2067,31 @@
   function initHorizontalScroll() {
     if (isMobile || !track) return;
 
-    // Calcul de la distance réelle à parcourir (track complet - espace visible)
+    // S'assurer que le track commence bien à 0
+    gsap.set(track, { x: 0 });
+
     const scrollDistance = track.scrollWidth - window.innerWidth;
     const totalScroll = Math.max(0, scrollDistance);
     
-    // On allonge significativement la zone de scroll pour ralentir l'effet
-    wrapper.style.height = (totalScroll * 4 + window.innerHeight) + 'px';
+    // On multiplie par 5 pour un défilement vraiment très lent
+    const scrollDuration = totalScroll * 5;
+    wrapper.style.height = (scrollDuration + window.innerHeight) + 'px';
 
-    gsap.to(track, {
-      x: () => -totalScroll,
-      ease: 'none',
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: wrapper,
         start: 'top top',
-        end: () => '+=' + (totalScroll * 4),
+        end: () => '+=' + scrollDuration,
         pin: sticky,
         scrub: 1,
         anticipatePin: 1,
         invalidateOnRefresh: true
       }
+    });
+
+    tl.to(track, {
+      x: -totalScroll,
+      ease: 'none'
     });
   }
 
