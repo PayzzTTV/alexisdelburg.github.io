@@ -1067,6 +1067,7 @@
         <div class="project-title">HoneyTrap</div>
         <div class="project-desc">Système de honeypot intelligent — SOC dashboard, heatmap temps réel, analyse de menaces SSH/HTTP.</div>
         <div class="project-mock">
+          <!-- Mock HoneyTrap SOC -->
           <div style="background:#0f172a; border-radius:12px; height:190px; overflow:hidden; padding:12px; font-family:'IBM Plex Mono',monospace; position:relative;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
               <span style="color:#38bdf8; font-size:10px; font-weight:600;">LIVE SOC FEED</span>
@@ -1111,21 +1112,47 @@
         <div class="project-detail-content">
           <div class="project-num">01 / 06</div>
           <h3>HoneyTrap</h3>
-          <p>Plateforme de Threat Intelligence et Honeypot de grade professionnel. HoneyTrap simule des services vulnérables (SSH avec tarpit, HTTP polymorphe) pour attirer et analyser les attaquants en temps réel.</p>
-          <p>Architecture asynchrone performante utilisant Python pour les traps et WebSockets pour le streaming live des menaces. Visualisation avancée via une heatmap mondiale interactive.</p>
+          <p>Plateforme de Threat Intelligence et Honeypot de grade professionnel. HoneyTrap simule des services vulnérables (SSH avec tarpit, HTTP polymorphe) pour attirer et analyser les attaquants en temps réel. Les données sont centralisées dans un dashboard SOC interactif.</p>
+          <p>Architecture asynchrone performante utilisant Python pour les traps et WebSockets pour le streaming live des menaces. Visualisation avancée via une heatmap mondiale interactive et des graphiques d'analyse comportementale. Sécurité renforcée par une architecture non-root et des politiques RLS Supabase.</p>
           <div class="detail-mock">
             <div style="background:#0f172a; border-radius:12px; padding:20px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#e2e8f0;">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
                 <span style="color:#38bdf8; font-size:14px; font-weight:700;">HoneyTrap SOC Engine</span>
                 <span style="background:#22c55e; color:#064e3b; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:600;">System Active</span>
               </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:15px;">
+                  <div style="font-size:10px; color:#94a3b8; margin-bottom:5px;">TOTAL ATTACKS (24H)</div>
+                  <div style="font-size:24px; font-weight:700; color:#38bdf8;">12,842</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:15px;">
+                  <div style="font-size:10px; color:#94a3b8; margin-bottom:5px;">THREAT LEVEL</div>
+                  <div style="font-size:24px; font-weight:700; color:#ef4444;">HIGH</div>
+                </div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03); border-radius:10px; padding:15px; font-size:10px;">
+                <div style="color:#94a3b8; margin-bottom:8px;">GEOGRAPHIC HEATMAP TREND</div>
+                <div style="height:40px; display:flex; align-items:flex-end; gap:4px;">
+                  <div style="flex:1; height:30%; background:#38bdf8; border-radius:2px;"></div>
+                  <div style="flex:1; height:45%; background:#38bdf8; border-radius:2px;"></div>
+                  <div style="flex:1; height:80%; background:#ef4444; border-radius:2px;"></div>
+                  <div style="flex:1; height:60%; background:#38bdf8; border-radius:2px;"></div>
+                  <div style="flex:1; height:95%; background:#ef4444; border-radius:2px;"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div style="margin-bottom:24px">
             <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
             <span class="skill-pill pill-violet">Next.js 14</span>
+            <span class="skill-pill pill-violet">TypeScript</span>
+            <span class="skill-pill pill-violet">Tailwind CSS</span>
             <span class="skill-pill pill-indigo">Python (Asyncio)</span>
+            <span class="skill-pill pill-indigo">Supabase Realtime</span>
             <span class="skill-pill pill-dark">Docker / Compose</span>
+            <span class="skill-pill pill-dark">React Simple Maps</span>
+            <span class="skill-pill pill-indigo">GitHub Actions</span>
+            <span class="skill-pill pill-indigo">Bandit & Gitleaks</span>
           </div>
           <a href="https://github.com/PayzzTTV/honeytrap" class="btn-primary" target="_blank" rel="noopener">
             <i class="ti ti-brand-github"></i> Voir sur GitHub
@@ -1140,15 +1167,31 @@
         <div class="project-title">GuardianPy</div>
         <div class="project-desc">Bot d'audit DevSecOps — scan de ports, scoring de risque, dashboard temps réel.</div>
         <div class="project-mock">
+          <!-- Mock terminal GuardianPy -->
           <div style="background:#0f0f23; border-radius:12px; padding:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#a5f3fc; height:190px; overflow:hidden; line-height:1.8;">
             <div style="color:#6ee7b7">$ guardian.py --scan 192.168.1.0/24</div>
             <div style="color:#94a3b8; margin-top:4px">Scanning 254 hosts...</div>
+            <div style="color:#fbbf24; margin-top:4px">⚠ 192.168.1.1:22 — SSH <span style="background:rgba(251,191,36,0.2);padding:1px 6px;border-radius:3px;">MEDIUM</span></div>
+            <div style="color:#f87171">✗ 192.168.1.50:3306 — MySQL exposed <span style="background:rgba(248,113,113,0.2);padding:1px 6px;border-radius:3px;">HIGH</span></div>
+            <div style="color:#6ee7b7">✓ 192.168.1.1:443 — HTTPS <span style="background:rgba(110,231,183,0.2);padding:1px 6px;border-radius:3px;">LOW</span></div>
+            <div style="margin-top:8px; color:#94a3b8; font-size:10px">Risk Score</div>
+            <div style="height:5px; background:#1e293b; border-radius:3px; margin-top:4px">
+              <div style="height:5px; width:72%; background:linear-gradient(90deg,#f87171,#fbbf24); border-radius:3px; animation: barLoad 1.5s ease forwards;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:3px;font-size:9px;color:#64748b"><span>0</span><span style="color:#fbbf24">72/100</span><span>100</span></div>
+            <div style="margin-top:8px; color:#64748b; font-size:9px; border-top:1px solid #1e293b; padding-top:6px">PORT&nbsp;&nbsp;STATE&nbsp;&nbsp;SERVICE&nbsp;&nbsp;RISK</div>
+            <div style="color:#e2e8f0; font-size:9px">22&nbsp;&nbsp;&nbsp;&nbsp;open&nbsp;&nbsp;&nbsp;ssh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MEDIUM</div>
+            <div style="color:#f87171; font-size:9px">3306&nbsp;&nbsp;open&nbsp;&nbsp;&nbsp;mysql&nbsp;&nbsp;&nbsp;&nbsp;HIGH</div>
           </div>
         </div>
         <div class="project-stack">
           <span class="skill-pill pill-indigo">Python</span>
+          <span class="skill-pill pill-violet">Flask</span>
           <span class="skill-pill pill-violet">Next.js</span>
           <span class="skill-pill pill-dark">Docker</span>
+          <span class="skill-pill pill-dark">MongoDB</span>
+          <span class="skill-pill pill-indigo">Bandit</span>
+          <span class="skill-pill pill-indigo">Trivy</span>
         </div>
         <div class="project-footer">
           <a href="https://github.com/PayzzTTV/guardian.py" class="project-link" target="_blank" rel="noopener">
@@ -1162,7 +1205,34 @@
         <div class="project-detail-content">
           <div class="project-num">02 / 06</div>
           <h3>GuardianPy</h3>
-          <p>Bot d'audit DevSecOps complet en Python. Scan TCP de ports avec scoring de risque.</p>
+          <p>Bot d'audit DevSecOps complet en Python. Scan TCP de ports avec scoring de risque (LOW/MEDIUM/HIGH/CRITICAL), génération de rapports JSON, stockage MongoDB, API REST Flask, et dashboard Next.js pour visualiser les scans en temps réel.</p>
+          <p>Architecture Docker Compose avec 3 services (api / dashboard / mongo). CI/CD GitHub Actions avec Bandit (SAST), Trivy (image scan) et Gitleaks (secrets leak detection).</p>
+          <div class="detail-mock">
+            <div style="background:#0f0f23; border-radius:12px; padding:20px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#a5f3fc; line-height:2;">
+              <div style="color:#6ee7b7">$ guardian.py --scan 192.168.1.0/24 --output report.json</div>
+              <div style="color:#94a3b8">Scanning 254 hosts on network 192.168.1.0/24...</div>
+              <div style="color:#fbbf24">⚠ Port 22 — SSH (risk: MEDIUM)</div>
+              <div style="color:#f87171">✗ Port 3306 — MySQL exposed (risk: HIGH)</div>
+              <div style="color:#f87171">✗ Port 21 — FTP cleartext (risk: CRITICAL)</div>
+              <div style="color:#6ee7b7">✓ Port 443 — HTTPS (risk: LOW)</div>
+              <div style="color:#a78bfa; margin-top:8px">→ Report saved: report.json</div>
+              <div style="color:#a78bfa">→ Dashboard: http://localhost:3000</div>
+              <div style="height:6px;background:#1e293b;border-radius:3px;margin-top:12px"><div style="height:6px;width:78%;background:linear-gradient(90deg,#f87171,#fbbf24);border-radius:3px;"></div></div>
+              <div style="color:#fbbf24;font-size:10px;margin-top:4px">Risk Score: 78/100</div>
+            </div>
+          </div>
+          <div style="margin-bottom:24px">
+            <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
+            <span class="skill-pill pill-indigo">Python</span>
+            <span class="skill-pill pill-violet">Flask</span>
+            <span class="skill-pill pill-violet">Next.js 14</span>
+            <span class="skill-pill pill-dark">Docker Compose</span>
+            <span class="skill-pill pill-dark">MongoDB</span>
+            <span class="skill-pill pill-indigo">GitHub Actions</span>
+            <span class="skill-pill pill-indigo">Bandit</span>
+            <span class="skill-pill pill-indigo">Trivy</span>
+            <span class="skill-pill pill-indigo">Gitleaks</span>
+          </div>
           <a href="https://github.com/PayzzTTV/guardian.py" class="btn-primary" target="_blank" rel="noopener">
             <i class="ti ti-brand-github"></i> Voir sur GitHub
           </a>
@@ -1174,13 +1244,91 @@
       <div class="project-compact">
         <div class="project-num">03 / 06</div>
         <div class="project-title">Klub</div>
-        <div class="project-desc">Marketplace B2B2C — BDE × prestataires événementiels.</div>
+        <div class="project-desc">Marketplace B2B2C — BDE × prestataires événementiels. Auth, paiement, temps réel.</div>
+        <div class="project-mock">
+          <!-- Mock Klub dashboard -->
+          <div style="background:#f8fafc; border-radius:12px; height:190px; overflow:hidden; display:flex;">
+            <div style="width:48px; background:#4f46e5; display:flex; flex-direction:column; align-items:center; padding:12px 0; gap:14px; flex-shrink:0;">
+              <div style="width:26px; height:26px; background:white; border-radius:8px; display:flex;align-items:center;justify-content:center;font-size:14px;">K</div>
+              <div style="width:20px; height:3px; background:rgba(255,255,255,0.5); border-radius:2px;"></div>
+              <div style="width:20px; height:3px; background:rgba(255,255,255,0.3); border-radius:2px;"></div>
+              <div style="width:20px; height:3px; background:rgba(255,255,255,0.3); border-radius:2px;"></div>
+            </div>
+            <div style="flex:1; padding:12px; font-family:'Space Grotesk',sans-serif; font-size:11px; overflow:hidden;">
+              <div style="font-weight:700; color:#1e1b4b; margin-bottom:8px; font-size:12px;">Événements à venir</div>
+              <div style="background:white; border-radius:8px; padding:8px 10px; margin-bottom:5px; border-left:3px solid #4f46e5; box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+                <div style="font-weight:600; color:#1e1b4b; font-size:11px;">Soirée BDE PSTB</div>
+                <div style="color:#64748b; font-size:10px;">15 Jan · 80 inscrits · 3 prestataires</div>
+              </div>
+              <div style="background:white; border-radius:8px; padding:8px 10px; margin-bottom:5px; border-left:3px solid #7c3aed; box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+                <div style="font-weight:600; color:#1e1b4b; font-size:11px;">Gala de fin d'année</div>
+                <div style="color:#64748b; font-size:10px;">28 Fév · 200 inscrits · 7 prestataires</div>
+              </div>
+              <div style="background:white; border-radius:8px; padding:8px 10px; border-left:3px solid #0ea5e9; box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+                <div style="font-weight:600; color:#1e1b4b; font-size:11px;">Tournoi esport</div>
+                <div style="color:#64748b; font-size:10px;">5 Mar · 45 inscrits · 2 prestataires</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="skill-pill pill-violet">Next.js 14</span>
+          <span class="skill-pill pill-violet">TypeScript</span>
+          <span class="skill-pill pill-indigo">Supabase</span>
+          <span class="skill-pill pill-dark">Stripe</span>
+          <span class="skill-pill pill-dark">Vercel</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/PayzzTTV" class="project-link" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i> GitHub <i class="ti ti-arrow-right"></i>
+          </a>
+          <span class="project-expand-hint">↗ cliquer pour détails</span>
+        </div>
       </div>
       <div class="project-detail">
         <button class="project-close" onclick="closeProject('proj-2')">✕</button>
         <div class="project-detail-content">
           <div class="project-num">03 / 06</div>
           <h3>Klub</h3>
+          <p>Marketplace B2B2C mettant en relation les Bureaux Des Étudiants avec des prestataires événementiels (DJ, traiteurs, photographes, sécurité). Gestion complète d'événements avec budgets, messagerie temps réel et paiements intégrés.</p>
+          <p>CLAUDE.md + CLAUDE_SECURITY.md pour la gouvernance IA. CI/CD complet avec scans SAST, image et secrets. Gestion des rôles BDE / Prestataire / Admin avec Row Level Security Supabase.</p>
+          <div class="detail-mock">
+            <div style="background:#f8fafc; border-radius:12px; padding:20px; font-family:'Space Grotesk',sans-serif; font-size:12px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <span style="font-weight:700;color:#1e1b4b;font-size:16px;">Klub Dashboard</span>
+                <span style="background:#4f46e5;color:white;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;">3 événements actifs</span>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
+                <div style="background:white;border-radius:10px;padding:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+                  <div style="font-size:20px;font-weight:700;color:#4f46e5;">325</div>
+                  <div style="font-size:10px;color:#64748b;">Inscrits</div>
+                </div>
+                <div style="background:white;border-radius:10px;padding:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+                  <div style="font-size:20px;font-weight:700;color:#7c3aed;">12</div>
+                  <div style="font-size:10px;color:#64748b;">Prestataires</div>
+                </div>
+                <div style="background:white;border-radius:10px;padding:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+                  <div style="font-size:20px;font-weight:700;color:#0ea5e9;">4 820€</div>
+                  <div style="font-size:10px;color:#64748b;">Revenus</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-bottom:24px">
+            <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
+            <span class="skill-pill pill-violet">Next.js 14</span>
+            <span class="skill-pill pill-violet">TypeScript</span>
+            <span class="skill-pill pill-violet">Tailwind CSS</span>
+            <span class="skill-pill pill-indigo">Supabase</span>
+            <span class="skill-pill pill-dark">Stripe Connect</span>
+            <span class="skill-pill pill-dark">Resend</span>
+            <span class="skill-pill pill-dark">Posthog</span>
+            <span class="skill-pill pill-dark">Vercel</span>
+            <span class="skill-pill pill-indigo">GitHub Actions</span>
+          </div>
+          <a href="https://github.com/PayzzTTV" class="btn-primary" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i> Voir sur GitHub
+          </a>
         </div>
       </div>
     </div>
@@ -1189,13 +1337,86 @@
       <div class="project-compact">
         <div class="project-num">04 / 06</div>
         <div class="project-title">AlternanceHub</div>
-        <div class="project-desc">SaaS agrégateur d'offres d'alternance cybersécurité.</div>
+        <div class="project-desc">SaaS agrégateur d'offres d'alternance cybersécurité — scraping auto, zéro coût infra.</div>
+        <div class="project-mock">
+          <!-- Mock AlternanceHub -->
+          <div style="background:#f8fafc; border-radius:12px; height:190px; overflow:hidden; padding:14px; font-family:'Space Grotesk',sans-serif; font-size:11px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:10px; align-items:center;">
+              <span style="font-weight:700; color:#1e1b4b; font-size:13px;">AlternanceHub</span>
+              <span style="background:#4f46e5; color:white; padding:3px 10px; border-radius:20px; font-size:10px; font-weight:600;">247 offres</span>
+            </div>
+            <div style="background:white; border:1px solid #e2e8f0; border-radius:8px; padding:6px 10px; color:#94a3b8; margin-bottom:10px; font-size:10px; display:flex;align-items:center;gap:6px;">
+              <i class="ti ti-search" style="font-size:12px;"></i>
+              Cybersécurité · Île-de-France · 3j/2j
+            </div>
+            <div style="background:white; border-radius:8px; padding:8px 10px; margin-bottom:5px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+              <div>
+                <div style="font-weight:600; color:#1e1b4b; font-size:11px;">Alternant SOC Analyst</div>
+                <div style="color:#64748b; font-size:9px;">Thales · Courbevoie · il y a 2h</div>
+              </div>
+              <span style="background:#dcfce7; color:#166534; padding:2px 7px; border-radius:4px; font-size:9px; font-weight:600;">NEW</span>
+            </div>
+            <div style="background:white; border-radius:8px; padding:8px 10px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+              <div>
+                <div style="font-weight:600; color:#1e1b4b; font-size:11px;">Alternant Pentest</div>
+                <div style="color:#64748b; font-size:9px;">Orange Cyberdef · Paris · il y a 5h</div>
+              </div>
+              <span style="background:#fef3c7; color:#92400e; padding:2px 7px; border-radius:4px; font-size:9px; font-weight:600;">MATCH</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="skill-pill pill-indigo">Python</span>
+          <span class="skill-pill pill-indigo">GitHub Actions</span>
+          <span class="skill-pill pill-violet">Supabase</span>
+          <span class="skill-pill pill-violet">Next.js</span>
+          <span class="skill-pill pill-dark">k3s</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/PayzzTTV" class="project-link" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i> GitHub <i class="ti ti-arrow-right"></i>
+          </a>
+          <span class="project-expand-hint">↗ cliquer pour détails</span>
+        </div>
       </div>
       <div class="project-detail">
         <button class="project-close" onclick="closeProject('proj-3')">✕</button>
         <div class="project-detail-content">
           <div class="project-num">04 / 06</div>
           <h3>AlternanceHub</h3>
+          <p>SaaS agrégateur d'offres d'alternance en cybersécurité avec contrainte zéro-coût infra. Scraping automatique via GitHub Actions CronJob (Python), stockage Supabase free tier avec RLS, frontend Next.js déployé sur Vercel.</p>
+          <p>DevSecOps intégré : Bandit (SAST), Trivy (scan d'images), Gitleaks (secrets), SBOM via Syft, manifestes Kubernetes k3s pour l'orchestration locale.</p>
+          <div class="detail-mock">
+            <div style="background:#f8fafc; border-radius:12px; padding:20px; font-family:'Space Grotesk',sans-serif; font-size:12px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <span style="font-weight:700;color:#1e1b4b;font-size:14px;">Pipeline de scraping</span>
+                <span style="background:#dcfce7;color:#166534;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">● Actif</span>
+              </div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#0f0f23;border-radius:8px;padding:12px;color:#a5f3fc;line-height:1.8;">
+                <div style="color:#6ee7b7"># GitHub Actions — schedule: "0 6 * * 1-5"</div>
+                <div>scraped 247 offres depuis 8 sources</div>
+                <div style="color:#fbbf24">→ 14 nouvelles offres cybersécurité IDF</div>
+                <div style="color:#6ee7b7">✓ Bandit: 0 issues | Trivy: 0 HIGH</div>
+                <div style="color:#6ee7b7">✓ Gitleaks: no secrets found</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-bottom:24px">
+            <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
+            <span class="skill-pill pill-indigo">Python</span>
+            <span class="skill-pill pill-indigo">GitHub Actions</span>
+            <span class="skill-pill pill-violet">Supabase</span>
+            <span class="skill-pill pill-violet">Next.js</span>
+            <span class="skill-pill pill-dark">Vercel</span>
+            <span class="skill-pill pill-dark">Docker multistage</span>
+            <span class="skill-pill pill-dark">k3s</span>
+            <span class="skill-pill pill-indigo">Syft</span>
+            <span class="skill-pill pill-indigo">Bandit</span>
+            <span class="skill-pill pill-indigo">Trivy</span>
+          </div>
+          <a href="https://github.com/PayzzTTV" class="btn-primary" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i> Voir sur GitHub
+          </a>
         </div>
       </div>
     </div>
@@ -1204,13 +1425,74 @@
       <div class="project-compact">
         <div class="project-num">05 / 06</div>
         <div class="project-title">WebScanner</div>
-        <div class="project-desc">Outil d'audit de sécurité web — 97 modules.</div>
+        <div class="project-desc">Outil d'audit de sécurité web — 97 modules, crawler récursif, fuzzer multithreadé.</div>
+        <div class="project-mock">
+          <div style="background:#0f0f23; border-radius:12px; padding:16px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#a5f3fc; height:190px; overflow:hidden; line-height:1.7;">
+            <div style="color:#6ee7b7">$ webscanner https://cible.com --crawl --max-depth 2</div>
+            <div style="color:#94a3b8; margin-top:4px">[*] Crawler — 42 URLs mapped</div>
+            <div style="color:#f87171; margin-top:2px">[!] XSS found — /search?q= <span style="background:rgba(248,113,113,0.2);padding:1px 5px;border-radius:3px;">HIGH</span></div>
+            <div style="color:#f87171">[!] SQLi (time-based) — /api/users <span style="background:rgba(248,113,113,0.2);padding:1px 5px;border-radius:3px;">CRITICAL</span></div>
+            <div style="color:#fbbf24">[!] CORS misconfigured — /api/* <span style="background:rgba(251,191,36,0.2);padding:1px 5px;border-radius:3px;">HIGH</span></div>
+            <div style="color:#fbbf24">[!] .env exposed — /.env <span style="background:rgba(251,191,36,0.2);padding:1px 5px;border-radius:3px;">CRITICAL</span></div>
+            <div style="color:#6ee7b7">[✓] HSTS present · HTTPS enforced</div>
+            <div style="margin-top:8px; color:#94a3b8; font-size:9px">Modules actifs</div>
+            <div style="height:4px; background:#1e293b; border-radius:3px; margin-top:3px">
+              <div style="height:4px; width:97%; background:linear-gradient(90deg,#a78bfa,#38bdf8); border-radius:3px;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:3px;font-size:9px;color:#64748b"><span>0</span><span style="color:#a78bfa">97 / 97</span><span>100</span></div>
+            <div style="margin-top:6px;color:#64748b;font-size:9px">253 tests · coverage 99% · CI passing</div>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="skill-pill pill-indigo">Python 3.11</span>
+          <span class="skill-pill pill-indigo">pytest</span>
+          <span class="skill-pill pill-violet">Jinja2</span>
+          <span class="skill-pill pill-dark">GitHub Actions</span>
+          <span class="skill-pill pill-indigo">OWASP</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/PayzzTTV/scanner_vulnerability_web" class="project-link" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i> GitHub <i class="ti ti-arrow-right"></i>
+          </a>
+          <span class="project-expand-hint">↗ cliquer pour détails</span>
+        </div>
       </div>
       <div class="project-detail">
         <button class="project-close" onclick="closeProject('proj-4')">✕</button>
         <div class="project-detail-content">
           <div class="project-num">05 / 06</div>
           <h3>WebScanner</h3>
+          <p>Outil d'audit de sécurité web automatisé entièrement en Python, couvrant 97 modules de détection : exploits CVEs critiques (Log4Shell, Spring4Shell, Shellshock), injections avancées (SQLi, NoSQL, XSS, XXE, SSTI, SSRF, Command Injection), fuites de données (clés API, JWT none, Firebase), exposition cloud (AWS IMDS, S3 takeover, subdomain takeover) et mauvaises configurations (CORS, CSP, HSTS, cookies).</p>
+          <p>Intègre un crawler récursif qui mappe l'intégralité de la surface d'attaque, un fuzzer multithreadé pour découvrir les assets cachés, un système anti-faux positifs (Soft 404 + validation sémantique), et un Stealth Mode avec rotation de User-Agents et détection WAF (Cloudflare, Akamai, AWS WAF). Export des rapports JSON, HTML et PDF pour intégration SIEM.</p>
+          <div class="detail-mock">
+            <div style="background:#0f0f23; border-radius:12px; padding:20px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#a5f3fc; line-height:1.9;">
+              <div style="color:#6ee7b7">$ webscanner https://cible.com --crawl --max-depth 2 --html report.html --pdf report.pdf</div>
+              <div style="color:#94a3b8; margin-top:6px">[*] Stealth Mode — UA rotation active · WAF: Cloudflare detected</div>
+              <div style="color:#94a3b8">[*] Crawler — 42 URLs · Fuzzer — 8 400 paths tested</div>
+              <div style="color:#f87171; margin-top:4px">[CRITICAL] Log4Shell (CVE-2021-44228) — /api/login header X-Api-Version</div>
+              <div style="color:#f87171">[CRITICAL] SQLi time-based — /api/users?id=1 (WAITFOR 5s confirmed)</div>
+              <div style="color:#f87171">[CRITICAL] .env exposed — /.env · STRIPE_KEY=sk_live_***</div>
+              <div style="color:#fbbf24">[HIGH] XSS stored — /comments?body=&lt;script&gt;</div>
+              <div style="color:#fbbf24">[HIGH] CORS * — /api/* Accept-Credentials: true</div>
+              <div style="color:#6ee7b7; margin-top:4px">[✓] Report: report.html · report.pdf</div>
+              <div style="color:#a78bfa">97 modules · 253 tests · coverage 99%</div>
+            </div>
+          </div>
+          <div style="margin-bottom:24px">
+            <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
+            <span class="skill-pill pill-indigo">Python 3.11+</span>
+            <span class="skill-pill pill-indigo">pytest</span>
+            <span class="skill-pill pill-violet">Jinja2</span>
+            <span class="skill-pill pill-dark">GitHub Actions CI</span>
+            <span class="skill-pill pill-indigo">OWASP Top 10</span>
+            <span class="skill-pill pill-indigo">CVE exploitation</span>
+            <span class="skill-pill pill-violet">Fuzzing</span>
+            <span class="skill-pill pill-dark">WAF detection</span>
+            <span class="skill-pill pill-dark">JSON/HTML/PDF</span>
+          </div>
+          <a href="https://github.com/PayzzTTV/scanner_vulnerability_web" class="btn-primary" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i> Voir sur GitHub
+          </a>
         </div>
       </div>
     </div>
@@ -1219,13 +1501,74 @@
       <div class="project-compact">
         <div class="project-num">06 / 06</div>
         <div class="project-title">RootGuard</div>
-        <div class="project-desc">Scanner d'intégrité système & détection de rootkits.</div>
+        <div class="project-desc">Scanner d'intégrité système & détection de rootkits — baseline SHA-256, CI/CD complet.</div>
+        <div class="project-mock">
+          <div style="background:#0f0f23; border-radius:12px; padding:16px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#a5f3fc; height:190px; overflow:hidden; line-height:1.7;">
+            <div style="color:#6ee7b7">$ sudo python3 main.py scan</div>
+            <div style="color:#94a3b8; margin-top:4px">=== RootGuard Scan Report ===</div>
+            <div style="color:#94a3b8">  Files scanned : 1247 · Duration : 3.41s</div>
+            <div style="color:#f87171; margin-top:4px">[CRITICAL] MODIFIED (1)</div>
+            <div style="color:#e2e8f0; font-size:9px; margin-left:8px">* /etc/passwd</div>
+            <div style="color:#64748b; font-size:9px; margin-left:10px">old: d9d9306e… → new: 0dc05bb0…</div>
+            <div style="color:#fbbf24; margin-top:4px">[HIGH] NEW (1)</div>
+            <div style="color:#e2e8f0; font-size:9px; margin-left:8px">* /usr/bin/evil_binary</div>
+            <div style="color:#64748b; font-size:9px; margin-left:10px">hash: 4b2e7f9a…</div>
+            <div style="margin-top:6px; color:#94a3b8; font-size:9px; border-top:1px solid #1e293b; padding-top:5px">Anomalies: 2 · Bandit: 0 issues · Trivy: 0 HIGH</div>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="skill-pill pill-indigo">Python 3.11</span>
+          <span class="skill-pill pill-indigo">pytest</span>
+          <span class="skill-pill pill-dark">Docker</span>
+          <span class="skill-pill pill-dark">GitHub Actions</span>
+          <span class="skill-pill pill-indigo">Bandit</span>
+          <span class="skill-pill pill-indigo">Trivy</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/PayzzTTV/toolscyber-" class="project-link" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i> GitHub <i class="ti ti-arrow-right"></i>
+          </a>
+          <span class="project-expand-hint">↗ cliquer pour détails</span>
+        </div>
       </div>
       <div class="project-detail">
         <button class="project-close" onclick="closeProject('proj-5')">✕</button>
         <div class="project-detail-content">
           <div class="project-num">06 / 06</div>
           <h3>RootGuard</h3>
+          <p>Outil CLI Python de surveillance de l'intégrité des fichiers critiques d'un système Linux. Génère une baseline cryptographique SHA-256 des chemins système (<code>/bin</code>, <code>/sbin</code>, <code>/etc</code>, <code>/usr/bin</code>, <code>/boot</code>, <code>/lib</code>), stockée en lecture seule (chmod 400), puis compare à chaque scan pour détecter toute modification (CRITICAL), ajout (HIGH) ou suppression (MEDIUM) — typiques d'une infection rootkit ou d'une compromission post-exploitation.</p>
+          <p>Pipeline CI/CD complet : lint → test → SAST Bandit → docker-build → Trivy scan (CI), puis build-and-push GHCR → release (CD). Image Docker non-root multi-stage, export JSON compatible SIEM (Splunk, Elasticsearch). Conçu pour s'intégrer en CronJob Kubernetes ou pipeline DevSecOps Shift Left.</p>
+          <div class="detail-mock">
+            <div style="background:#0f0f23; border-radius:12px; padding:20px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#a5f3fc; line-height:1.9;">
+              <div style="color:#6ee7b7">$ sudo python3 main.py scan --output json</div>
+              <div style="color:#94a3b8; margin-top:6px">=== RootGuard Scan Report ===</div>
+              <div style="color:#94a3b8">  Files scanned : 1247 · Anomalies : 2 · Duration : 3.41s</div>
+              <div style="color:#f87171; margin-top:6px">[CRITICAL] MODIFIED (1)</div>
+              <div style="color:#e2e8f0; margin-left:12px">* /etc/passwd</div>
+              <div style="color:#64748b; font-size:10px; margin-left:14px">old: d9d9306eaf0ace2ce… → new: 0dc05bb02996ee65c…</div>
+              <div style="color:#fbbf24; margin-top:4px">[HIGH] NEW (1)</div>
+              <div style="color:#e2e8f0; margin-left:12px">* /usr/bin/evil_binary</div>
+              <div style="color:#64748b; font-size:10px; margin-left:14px">hash: 4b2e7f9a1c3d5e6f…</div>
+              <div style="color:#6ee7b7; margin-top:6px">✓ Bandit: 0 issues · Trivy: 0 HIGH/CRITICAL</div>
+              <div style="color:#a78bfa">→ report.json — SIEM ready</div>
+            </div>
+          </div>
+          <div style="margin-bottom:24px">
+            <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
+            <span class="skill-pill pill-indigo">Python 3.11+</span>
+            <span class="skill-pill pill-indigo">pytest</span>
+            <span class="skill-pill pill-dark">Docker multi-stage</span>
+            <span class="skill-pill pill-dark">GHCR</span>
+            <span class="skill-pill pill-dark">GitHub Actions CI/CD</span>
+            <span class="skill-pill pill-indigo">Bandit (SAST)</span>
+            <span class="skill-pill pill-indigo">Trivy</span>
+            <span class="skill-pill pill-violet">SHA-256</span>
+            <span class="skill-pill pill-violet">JSON / SIEM</span>
+            <span class="skill-pill pill-dark">Kubernetes CronJob</span>
+          </div>
+          <a href="https://github.com/PayzzTTV/toolscyber-" class="btn-primary" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i> Voir sur GitHub
+          </a>
         </div>
       </div>
     </div>
