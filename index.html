@@ -400,7 +400,7 @@
     }
     .projects-track {
       display: flex; gap: 32px;
-      padding: 0 80px;
+      padding: 0 40vw;
       will-change: transform;
     }
     .project-card {
@@ -2067,23 +2067,25 @@
   function initHorizontalScroll() {
     if (isMobile || !track) return;
 
-    const totalScroll = Math.max(0, track.scrollWidth - window.innerWidth);
-    wrapper.style.height = (totalScroll * 3 + window.innerHeight) + 'px';
+    // Calcul de la distance réelle à parcourir (track complet - espace visible)
+    const scrollDistance = track.scrollWidth - window.innerWidth;
+    const totalScroll = Math.max(0, scrollDistance);
+    
+    wrapper.style.height = (totalScroll * 2 + window.innerHeight) + 'px';
 
     gsap.to(track, {
-      x: () => -(track.scrollWidth - window.innerWidth),
+      x: () => -totalScroll,
       ease: 'none',
       scrollTrigger: {
         trigger: wrapper,
         start: 'top top',
-        end: () => '+=' + (totalScroll * 3),
+        end: () => '+=' + (totalScroll * 2),
         pin: sticky,
         scrub: 1,
         anticipatePin: 1,
         invalidateOnRefresh: true
       }
     });
-
   }
 
   // Mobile: just show cards stacked
