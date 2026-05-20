@@ -400,7 +400,7 @@
     }
     .projects-track {
       display: flex; gap: 32px;
-      padding: 0 40vw;
+      padding: 0 80px;
       will-change: transform;
     }
     .project-card {
@@ -2071,7 +2071,8 @@
     const scrollDistance = track.scrollWidth - window.innerWidth;
     const totalScroll = Math.max(0, scrollDistance);
     
-    wrapper.style.height = (totalScroll * 2 + window.innerHeight) + 'px';
+    // On allonge significativement la zone de scroll pour ralentir l'effet
+    wrapper.style.height = (totalScroll * 4 + window.innerHeight) + 'px';
 
     gsap.to(track, {
       x: () => -totalScroll,
@@ -2079,7 +2080,7 @@
       scrollTrigger: {
         trigger: wrapper,
         start: 'top top',
-        end: () => '+=' + (totalScroll * 2),
+        end: () => '+=' + (totalScroll * 4),
         pin: sticky,
         scrub: 1,
         anticipatePin: 1,
