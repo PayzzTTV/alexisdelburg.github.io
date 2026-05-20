@@ -1084,6 +1084,106 @@
         <div class="projects-sticky-inner">
         <div class="projects-track" id="projects-track">
 
+          <!-- PROJET 0 : HoneyTrap -->
+          <div class="glass-card project-card" id="proj-0">
+            <div class="project-compact">
+              <div class="project-num">01 / 06</div>
+              <div class="project-title">HoneyTrap</div>
+              <div class="project-desc">Système de honeypot intelligent — SOC dashboard, heatmap temps réel, analyse de menaces SSH/HTTP.</div>
+              <div class="project-mock">
+                <div style="background:#0f172a; border-radius:12px; height:190px; overflow:hidden; padding:12px; font-family:'IBM Plex Mono',monospace; position:relative;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <span style="color:#38bdf8; font-size:10px; font-weight:600;">LIVE SOC FEED</span>
+                    <span style="background:rgba(239,68,68,0.2); color:#ef4444; padding:2px 6px; border-radius:4px; font-size:9px; animation:blink 1s infinite;">● ATTACK IN PROGRESS</span>
+                  </div>
+                  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
+                    <div style="background:rgba(255,255,255,0.05); border-radius:6px; padding:8px;">
+                      <div style="color:#94a3b8; font-size:8px; margin-bottom:4px;">TOP ORIGIN</div>
+                      <div style="color:#f8fafc; font-size:11px; font-weight:700;">Russia (RU)</div>
+                      <div style="color:#ef4444; font-size:9px;">42 attempts/min</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.05); border-radius:6px; padding:8px;">
+                      <div style="color:#94a3b8; font-size:8px; margin-bottom:4px;">ACTIVE TRAPS</div>
+                      <div style="color:#f8fafc; font-size:11px; font-weight:700;">SSH, HTTP, SQL</div>
+                      <div style="color:#22c55e; font-size:9px;">All systems nominal</div>
+                    </div>
+                  </div>
+                  <div style="margin-top:10px; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px;">
+                    <div style="color:#64748b; font-size:8px; margin-bottom:4px;">REAL-TIME THREAT LOGS</div>
+                    <div style="color:#34d399; font-size:9px;">[14:22:01] SSH auth failure - root:123456 from 185.x.x.x</div>
+                    <div style="color:#facc15; font-size:9px;">[14:22:05] HTTP GET /.env detected from 91.x.x.x</div>
+                    <div style="color:#34d399; font-size:9px;">[14:22:12] SSH auth failure - admin:password from 185.x.x.x</div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-stack">
+                <span class="skill-pill pill-violet">Next.js 14</span>
+                <span class="skill-pill pill-indigo">Python (Async)</span>
+                <span class="skill-pill pill-violet">TypeScript</span>
+                <span class="skill-pill pill-indigo">Supabase Realtime</span>
+                <span class="skill-pill pill-dark">Docker</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/PayzzTTV/honeytrap" class="project-link" target="_blank" rel="noopener">
+                  <i class="ti ti-brand-github"></i> GitHub <i class="ti ti-arrow-right"></i>
+                </a>
+                <span class="project-expand-hint">↗ cliquer pour détails</span>
+              </div>
+            </div>
+            <div class="project-detail">
+              <button class="project-close" onclick="closeProject('proj-0')">✕</button>
+              <div class="project-detail-content">
+                <div class="project-num">01 / 06</div>
+                <h3>HoneyTrap</h3>
+                <p>Plateforme de Threat Intelligence et Honeypot de grade professionnel. HoneyTrap simule des services vulnérables (SSH avec tarpit, HTTP polymorphe) pour attirer et analyser les attaquants en temps réel. Les données sont centralisées dans un dashboard SOC interactif.</p>
+                <p>Architecture asynchrone performante utilisant Python pour les traps et WebSockets pour le streaming live des menaces. Visualisation avancée via une heatmap mondiale interactive et des graphiques d'analyse comportementale. Sécurité renforcée par une architecture non-root et des politiques RLS Supabase.</p>
+                <div class="detail-mock">
+                  <div style="background:#0f172a; border-radius:12px; padding:20px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#e2e8f0;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                      <span style="color:#38bdf8; font-size:14px; font-weight:700;">HoneyTrap SOC Engine</span>
+                      <span style="background:#22c55e; color:#064e3b; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:600;">System Active</span>
+                    </div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+                      <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:15px;">
+                        <div style="font-size:10px; color:#94a3b8; margin-bottom:5px;">TOTAL ATTACKS (24H)</div>
+                        <div style="font-size:24px; font-weight:700; color:#38bdf8;">12,842</div>
+                      </div>
+                      <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:15px;">
+                        <div style="font-size:10px; color:#94a3b8; margin-bottom:5px;">THREAT LEVEL</div>
+                        <div style="font-size:24px; font-weight:700; color:#ef4444;">HIGH</div>
+                      </div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.03); border-radius:10px; padding:15px; font-size:10px;">
+                      <div style="color:#94a3b8; margin-bottom:8px;">GEOGRAPHIC HEATMAP TREND</div>
+                      <div style="height:40px; display:flex; align-items:flex-end; gap:4px;">
+                        <div style="flex:1; height:30%; background:#38bdf8; border-radius:2px;"></div>
+                        <div style="flex:1; height:45%; background:#38bdf8; border-radius:2px;"></div>
+                        <div style="flex:1; height:80%; background:#ef4444; border-radius:2px;"></div>
+                        <div style="flex:1; height:60%; background:#38bdf8; border-radius:2px;"></div>
+                        <div style="flex:1; height:95%; background:#ef4444; border-radius:2px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="margin-bottom:24px">
+                  <div class="skills-section-title" style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Stack complète</div>
+                  <span class="skill-pill pill-violet">Next.js 14</span>
+                  <span class="skill-pill pill-violet">TypeScript</span>
+                  <span class="skill-pill pill-violet">Tailwind CSS</span>
+                  <span class="skill-pill pill-indigo">Python (Asyncio)</span>
+                  <span class="skill-pill pill-indigo">Supabase Realtime</span>
+                  <span class="skill-pill pill-dark">Docker / Compose</span>
+                  <span class="skill-pill pill-dark">React Simple Maps</span>
+                  <span class="skill-pill pill-indigo">GitHub Actions</span>
+                  <span class="skill-pill pill-indigo">Bandit & Gitleaks</span>
+                </div>
+                <a href="https://github.com/PayzzTTV/honeytrap" class="btn-primary" target="_blank" rel="noopener">
+                  <i class="ti ti-brand-github"></i> Voir sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
           <!-- PROJET 1 : GuardianPy -->
           <div class="glass-card project-card" id="proj-1">
             <div class="project-compact">
@@ -1169,7 +1269,7 @@
           <!-- PROJET 2 : Klub -->
           <div class="glass-card project-card" id="proj-2">
             <div class="project-compact">
-              <div class="project-num">02 / 05</div>
+              <div class="project-num">03 / 06</div>
               <div class="project-title">Klub</div>
               <div class="project-desc">Marketplace B2B2C — BDE × prestataires événementiels. Auth, paiement, temps réel.</div>
               <div class="project-mock">
@@ -1216,7 +1316,7 @@
             <div class="project-detail">
               <button class="project-close" onclick="closeProject('proj-2')">✕</button>
               <div class="project-detail-content">
-                <div class="project-num">02 / 05</div>
+                <div class="project-num">03 / 06</div>
                 <h3>Klub</h3>
                 <p>Marketplace B2B2C mettant en relation les Bureaux Des Étudiants avec des prestataires événementiels (DJ, traiteurs, photographes, sécurité). Gestion complète d'événements avec budgets, messagerie temps réel et paiements intégrés.</p>
                 <p>CLAUDE.md + CLAUDE_SECURITY.md pour la gouvernance IA. CI/CD complet avec scans SAST, image et secrets. Gestion des rôles BDE / Prestataire / Admin avec Row Level Security Supabase.</p>
@@ -1264,7 +1364,7 @@
           <!-- PROJET 3 : AlternanceHub -->
           <div class="glass-card project-card" id="proj-3">
             <div class="project-compact">
-              <div class="project-num">03 / 05</div>
+              <div class="project-num">04 / 06</div>
               <div class="project-title">AlternanceHub</div>
               <div class="project-desc">SaaS agrégateur d'offres d'alternance cybersécurité — scraping auto, zéro coût infra.</div>
               <div class="project-mock">
@@ -1312,7 +1412,7 @@
             <div class="project-detail">
               <button class="project-close" onclick="closeProject('proj-3')">✕</button>
               <div class="project-detail-content">
-                <div class="project-num">03 / 05</div>
+                <div class="project-num">04 / 06</div>
                 <h3>AlternanceHub</h3>
                 <p>SaaS agrégateur d'offres d'alternance en cybersécurité avec contrainte zéro-coût infra. Scraping automatique via GitHub Actions CronJob (Python), stockage Supabase free tier avec RLS, frontend Next.js déployé sur Vercel.</p>
                 <p>DevSecOps intégré : Bandit (SAST), Trivy (scan d'images), Gitleaks (secrets), SBOM via Syft, manifestes Kubernetes k3s pour l'orchestration locale.</p>
@@ -1354,7 +1454,7 @@
           <!-- PROJET 4 : WebScanner -->
           <div class="glass-card project-card" id="proj-4">
             <div class="project-compact">
-              <div class="project-num">04 / 05</div>
+              <div class="project-num">05 / 06</div>
               <div class="project-title">WebScanner</div>
               <div class="project-desc">Outil d'audit de sécurité web — 97 modules, crawler récursif, fuzzer multithreadé.</div>
               <div class="project-mock">
@@ -1392,7 +1492,7 @@
             <div class="project-detail">
               <button class="project-close" onclick="closeProject('proj-4')">✕</button>
               <div class="project-detail-content">
-                <div class="project-num">04 / 05</div>
+                <div class="project-num">05 / 06</div>
                 <h3>WebScanner</h3>
                 <p>Outil d'audit de sécurité web automatisé entièrement en Python, couvrant 97 modules de détection : exploits CVEs critiques (Log4Shell, Spring4Shell, Shellshock), injections avancées (SQLi, NoSQL, XSS, XXE, SSTI, SSRF, Command Injection), fuites de données (clés API, JWT none, Firebase), exposition cloud (AWS IMDS, S3 takeover, subdomain takeover) et mauvaises configurations (CORS, CSP, HSTS, cookies).</p>
                 <p>Intègre un crawler récursif qui mappe l'intégralité de la surface d'attaque, un fuzzer multithreadé pour découvrir les assets cachés, un système anti-faux positifs (Soft 404 + validation sémantique), et un Stealth Mode avec rotation de User-Agents et détection WAF (Cloudflare, Akamai, AWS WAF). Export des rapports JSON, HTML et PDF pour intégration SIEM.</p>
@@ -1432,7 +1532,7 @@
           <!-- PROJET 5 : RootGuard -->
           <div class="glass-card project-card" id="proj-5">
             <div class="project-compact">
-              <div class="project-num">05 / 05</div>
+              <div class="project-num">06 / 06</div>
               <div class="project-title">RootGuard</div>
               <div class="project-desc">Scanner d'intégrité système & détection de rootkits — baseline SHA-256, CI/CD complet.</div>
               <div class="project-mock">
@@ -1510,7 +1610,7 @@
         </div><!-- /projects-track -->
         <div class="projects-nav">
           <button class="projects-nav-btn" id="proj-prev" onclick="navigateProject(-1)">&#8592;</button>
-          <span class="projects-nav-counter" id="proj-counter">1 / 3</span>
+          <span class="projects-nav-counter" id="proj-counter">1 / 6</span>
           <button class="projects-nav-btn" id="proj-next" onclick="navigateProject(1)">&#8594;</button>
         </div>
         </div><!-- /projects-sticky-inner -->
