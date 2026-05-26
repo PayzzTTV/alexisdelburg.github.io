@@ -749,7 +749,6 @@
       .project-detail-content h3 { font-size: clamp(20px, 5vw, 28px); }
       .project-detail p { font-size: 14px; }
       .detail-mock { margin-top: 20px; margin-bottom: 20px; }
-      .detail-mock div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
 
       /* PSTB modal */
       .pstb-modal-inner { padding: 64px 16px 40px; }
@@ -844,15 +843,9 @@
     #project-modal {
       position: fixed; inset: 0; z-index: 1001;
       display: none; overflow-y: scroll;
+      background: rgba(238,242,255,0.97);
       scrollbar-width: none;
       -ms-overflow-style: none;
-    }
-    #project-modal::before {
-      content: ''; position: fixed; inset: 0;
-      background: var(--glass-bg);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      z-index: -1;
     }
     #project-modal::-webkit-scrollbar { display: none; }
     #project-modal.open { display: block; }
