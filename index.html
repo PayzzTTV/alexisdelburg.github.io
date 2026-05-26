@@ -268,8 +268,26 @@
     }
     .hero-badge {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px; color: var(--text-muted);
-      letter-spacing: 2px; text-transform: uppercase;
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: #16a34a;
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.35);
+      padding: 6px 14px; border-radius: 50px;
+    }
+    .nav-dispo {
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px; font-weight: 500; color: #16a34a;
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.30);
+      padding: 5px 12px; border-radius: 50px;
+      white-space: nowrap;
+    }
+    .nav-dispo-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #22c55e;
+      box-shadow: 0 0 8px rgba(34,197,94,0.7);
+      animation: float 2s ease-in-out infinite;
     }
     .hero-h1 {
       font-size: clamp(52px, 8vw, 100px);
@@ -619,18 +637,25 @@
     .contact-link-label { font-size: 12px; color: var(--text-muted); font-family: 'IBM Plex Mono', monospace; }
     .contact-link-value { font-size: 15px; font-weight: 600; }
     .contact-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .qr-block {
-      margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 16px;
+    .qr-popover {
+      display: none; position: absolute; top: calc(100% + 12px); right: 0;
+      background: white; border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(79,70,229,0.18);
+      padding: 20px; z-index: 2000;
+      flex-direction: column; align-items: center; gap: 14px;
+      min-width: 220px;
     }
-    .qr-label { font-size: 12px; color: var(--text-muted); font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.05em; }
-.qr-download {
-      font-size: 13px; color: var(--accent); font-weight: 600;
+    .qr-popover.open { display: flex; }
+    .qr-popover-label { font-size: 11px; color: var(--text-muted); font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+    .qr-popover-dl {
+      font-size: 12px; color: var(--accent); font-weight: 600;
       text-decoration: none; display: flex; align-items: center; gap: 6px;
-      padding: 8px 18px; border-radius: 50px;
+      padding: 7px 16px; border-radius: 50px;
       border: 1.5px solid rgba(79,70,229,0.25);
-      transition: all 0.2s ease;
+      transition: all 0.2s ease; width: 100%; justify-content: center;
     }
-    .qr-download:hover { background: var(--accent); color: white; }
+    .qr-popover-dl:hover { background: var(--accent); color: white; }
+    #qr-btn { position: relative; }
 
     /* ===== FOOTER ===== */
     footer {
@@ -662,14 +687,13 @@
       footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
       #navbar { padding: 16px 20px; }
       .nav-links, .nav-right { display: none; }
+      .nav-dispo { display: none; }
       .hamburger { display: flex; }
       .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
       .hero-h1 { letter-spacing: -1px; }
       .hero-ctas { flex-direction: column; }
       .btn-primary, .btn-glass { width: 100%; text-align: center; justify-content: center; }
       .contact-ctas { flex-direction: column; }
-      .qr-block { margin-top: 32px; }
-      .qr-download { width: 100%; justify-content: center; }
       .project-card { width: 300px; }
       .timeline-item { grid-template-columns: 1fr; }
       .timeline-center { display: none; }
@@ -686,7 +710,7 @@
       .stats-grid { grid-template-columns: 1fr; }
       .ctf-stats-grid { grid-template-columns: 1fr; }
       .hero-socials { flex-wrap: wrap; }
-      #qr-container canvas, #qr-container img { width: 150px !important; height: 150px !important; }
+      #qr-container-pop canvas, #qr-container-pop img { width: 150px !important; height: 150px !important; }
     }
 
     /* Mobile nav menu */
@@ -857,8 +881,16 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
+    <div class="nav-dispo"><span class="nav-dispo-dot"></span>Dispo · Sept. 2026</div>
     <a href="https://github.com/PayzzTTV" class="nav-icon-btn" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
     <a href="https://www.linkedin.com/in/alexis-delburg-5737b42b0/" class="nav-icon-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+    <button id="qr-btn" class="nav-icon-btn" aria-label="QR Code" style="background:none;border-color:rgba(79,70,229,0.2);cursor:pointer;"><i class="ti ti-qrcode"></i>
+      <div class="qr-popover" id="qr-popover">
+        <span class="qr-popover-label">Mon portfolio</span>
+        <div id="qr-container-pop"></div>
+        <a id="qr-popover-dl" class="qr-popover-dl" download="qr-alexisdelburg.png"><i class="ti ti-download"></i>Télécharger</a>
+      </div>
+    </button>
     <a href="CV_Alexis_Delburg_ATS.pdf" download class="nav-cta" aria-label="Télécharger le CV"><i class="ti ti-download" style="margin-right:6px;font-size:15px;vertical-align:-2px"></i>CV</a>
   </div>
   <div class="hamburger" id="hamburger">
@@ -1906,13 +1938,6 @@
         <a href="CV_Alexis_Delburg_ATS.pdf" download class="btn-glass"><i class="ti ti-download" style="margin-right:8px;font-size:16px;vertical-align:-2px"></i>Télécharger mon CV</a>
       </div>
 
-      <div class="qr-block">
-        <p class="qr-label">// scanner pour accéder au portfolio</p>
-        <div id="qr-container" style="border-radius:16px;padding:16px;background:white;box-shadow:0 4px 24px rgba(79,70,229,0.12);"></div>
-        <a id="qr-download" class="qr-download" download="qr-alexisdelburg.png">
-          <i class="ti ti-download"></i>Sauvegarder le QR code
-        </a>
-      </div>
     </div>
   </div>
 </section>
@@ -2479,20 +2504,31 @@
 
 <script>
   (function() {
-    var qr = new QRCode(document.getElementById('qr-container'), {
-      text: 'https://payzzttv.github.io/alexisdelburg.github.io/',
-      width: 180,
-      height: 180,
-      colorDark: '#4f46e5',
-      colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.H
-    });
-    setTimeout(function() {
-      var canvas = document.querySelector('#qr-container canvas');
-      if (canvas) {
-        document.getElementById('qr-download').href = canvas.toDataURL('image/png');
+    var qrGenerated = false;
+    var btn = document.getElementById('qr-btn');
+    var popover = document.getElementById('qr-popover');
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = popover.classList.toggle('open');
+      if (isOpen && !qrGenerated) {
+        new QRCode(document.getElementById('qr-container-pop'), {
+          text: 'https://payzzttv.github.io/alexisdelburg.github.io/',
+          width: 180, height: 180,
+          colorDark: '#4f46e5', colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.H
+        });
+        setTimeout(function() {
+          var canvas = document.querySelector('#qr-container-pop canvas');
+          if (canvas) document.getElementById('qr-popover-dl').href = canvas.toDataURL('image/png');
+        }, 100);
+        qrGenerated = true;
       }
-    }, 100);
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!btn.contains(e.target)) popover.classList.remove('open');
+    });
   })();
 </script>
 </body>
