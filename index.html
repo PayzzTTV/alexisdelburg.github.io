@@ -744,14 +744,6 @@
       /* Projets — modal */
       .modal-inner { padding: 56px 16px 80px; }
       .modal-close { top: 14px; right: 14px; width: 38px; height: 38px; font-size: 16px; }
-      .projects-nav {
-        bottom: 16px !important;
-        background: rgba(238,242,255,0.95);
-        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-        padding: 10px 20px; border-radius: 50px;
-        box-shadow: 0 4px 20px rgba(79,70,229,0.15);
-      }
-      .projects-nav-btn { width: 38px; height: 38px; font-size: 16px; }
       .project-detail { padding: 20px 0; }
       .project-detail-content { max-width: 100%; }
       .project-detail-content h3 { font-size: clamp(20px, 5vw, 28px); }
@@ -868,25 +860,6 @@
       min-height: 100vh; padding: 60px 80px;
       max-width: 900px; margin: 0 auto;
       position: relative;
-    }
-    .projects-nav {
-      display: flex; align-items: center; gap: 12px; z-index: 10;
-      position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
-    }
-    .projects-nav-btn {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: white; border: 1px solid rgba(79,70,229,0.2);
-      cursor: pointer; font-size: 18px;
-      display: flex; align-items: center; justify-content: center;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 16px rgba(79,70,229,0.12);
-      color: var(--text);
-    }
-    .projects-nav-btn:hover { background: var(--accent); color: white; transform: scale(1.1); }
-    .projects-nav-btn:disabled { opacity: 0.3; cursor: default; transform: none; }
-    .projects-nav-counter {
-      font-family: 'IBM Plex Mono', monospace; font-size: 12px;
-      color: var(--text-muted); letter-spacing: 2px;
     }
     .modal-close {
       position: fixed; top: 24px; right: 32px;
@@ -1789,11 +1762,6 @@
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div id="project-modal-content"></div>
   </div>
-  <div class="projects-nav" id="modal-nav">
-    <button class="projects-nav-btn" id="modal-prev" onclick="modalNav(-1)">&#8592;</button>
-    <span class="projects-nav-counter" id="modal-counter">1 / 6</span>
-    <button class="projects-nav-btn" id="modal-next" onclick="modalNav(1)">&#8594;</button>
-  </div>
 </div>
 
 <!-- ===== SECTION : CTF ===== -->
@@ -2285,23 +2253,6 @@
     if (oldClose) oldClose.remove();
     modal.scrollTop = 0;
 
-    // Mise à jour compteur et boutons nav modal
-    const mc = document.getElementById('modal-counter');
-    const mp = document.getElementById('modal-prev');
-    const mn = document.getElementById('modal-next');
-    if (mc) mc.textContent = (index + 1) + ' / ' + cards.length;
-    if (mp) mp.disabled = index === 0;
-    if (mn) mn.disabled = index === cards.length - 1;
-  }
-
-  function modalNav(dir) {
-    const next = currentProjectIndex + dir;
-    if (next < 0 || next >= cards.length) return;
-    currentProjectIndex = next;
-    gsap.to(modalContent, { opacity: 0, x: dir * -30, duration: 0.2, ease: 'power2.in', onComplete: () => {
-      loadProject(currentProjectIndex);
-      gsap.fromTo(modalContent, { opacity: 0, x: dir * 30 }, { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out' });
-    }});
   }
 
   let currentCardIndex = 0;
