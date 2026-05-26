@@ -852,11 +852,15 @@
     #project-modal {
       position: fixed; inset: 0; z-index: 1001;
       display: none; overflow-y: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    #project-modal::before {
+      content: ''; position: fixed; inset: 0;
       background: var(--glass-bg);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+      z-index: -1;
     }
     #project-modal::-webkit-scrollbar { display: none; }
     #project-modal.open { display: block; }
