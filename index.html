@@ -947,6 +947,15 @@
   <a href="#experience">Expériences</a>
   <a href="#contact">Contact</a>
   <a href="CV_Alexis_Delburg_ATS.pdf" download style="font-size:18px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:8px;"><i class="ti ti-download"></i>Télécharger mon CV</a>
+  <span id="mobile-qr-btn" style="font-size:18px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:8px;cursor:pointer;"><i class="ti ti-qrcode"></i>QR Code</span>
+</div>
+
+<!-- Mobile QR modal -->
+<div id="mobile-qr-modal" style="display:none;position:fixed;inset:0;z-index:1200;background:rgba(238,242,255,0.98);flex-direction:column;align-items:center;justify-content:center;gap:20px;">
+  <span id="mobile-qr-close" style="position:absolute;top:20px;right:24px;font-size:32px;cursor:pointer;color:var(--text);width:44px;height:44px;display:flex;align-items:center;justify-content:center;">✕</span>
+  <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;">Mon portfolio</span>
+  <div id="qr-container-mobile" style="background:white;padding:20px;border-radius:16px;box-shadow:0 4px 24px rgba(79,70,229,0.12);"></div>
+  <a id="qr-mobile-dl" class="btn-primary" download="qr-alexisdelburg.png" style="display:flex;align-items:center;gap:8px;width:auto;"><i class="ti ti-download"></i>Télécharger</a>
 </div>
 
 <!-- ===== NAVBAR ===== -->
@@ -2589,6 +2598,38 @@
 
     document.addEventListener('click', function(e) {
       if (!btn.contains(e.target)) popover.classList.remove('open');
+    });
+  })();
+
+  // Mobile QR modal
+  (function() {
+    var mobileBtn = document.getElementById('mobile-qr-btn');
+    var modal = document.getElementById('mobile-qr-modal');
+    var closeBtn = document.getElementById('mobile-qr-close');
+    var mobileQrGenerated = false;
+
+    mobileBtn.addEventListener('click', function() {
+      closeMobileNav();
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      if (!mobileQrGenerated) {
+        new QRCode(document.getElementById('qr-container-mobile'), {
+          text: 'https://payzzttv.github.io/alexisdelburg.github.io/',
+          width: 200, height: 200,
+          colorDark: '#4f46e5', colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.H
+        });
+        setTimeout(function() {
+          var canvas = document.querySelector('#qr-container-mobile canvas');
+          if (canvas) document.getElementById('qr-mobile-dl').href = canvas.toDataURL('image/png');
+        }, 150);
+        mobileQrGenerated = true;
+      }
+    });
+
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
     });
   })();
 </script>
