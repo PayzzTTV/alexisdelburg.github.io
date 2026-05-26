@@ -666,7 +666,10 @@
       .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
       .hero-h1 { letter-spacing: -1px; }
       .hero-ctas { flex-direction: column; }
-      .btn-primary, .btn-glass { width: 100%; text-align: center; }
+      .btn-primary, .btn-glass { width: 100%; text-align: center; justify-content: center; }
+      .contact-ctas { flex-direction: column; }
+      .qr-block { margin-top: 32px; }
+      .qr-download { width: 100%; justify-content: center; }
       .project-card { width: 300px; }
       .timeline-item { grid-template-columns: 1fr; }
       .timeline-center { display: none; }
@@ -683,6 +686,7 @@
       .stats-grid { grid-template-columns: 1fr; }
       .ctf-stats-grid { grid-template-columns: 1fr; }
       .hero-socials { flex-wrap: wrap; }
+      #qr-container canvas, #qr-container img { width: 150px !important; height: 150px !important; }
     }
 
     /* Mobile nav menu */
@@ -839,6 +843,7 @@
   <a href="#ctf">CTF</a>
   <a href="#experience">Expériences</a>
   <a href="#contact">Contact</a>
+  <a href="CV_Alexis_Delburg_ATS.pdf" download style="font-size:18px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:8px;"><i class="ti ti-download"></i>Télécharger mon CV</a>
 </div>
 
 <!-- ===== NAVBAR ===== -->
